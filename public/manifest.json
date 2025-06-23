@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Atharva's Portfolio",
+  "name": "Atharva Kumar - Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0000FF",
+  "background_color": "#ffffff",
+  "description": "Portfolio website of Atharva Kumar - System Software Engineer Intern at NVIDIA, passionate about software development and competitive programming."
 }
