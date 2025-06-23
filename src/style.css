@@ -1,0 +1,640 @@
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #3B3B3B;
+    background-color: #FFFFFF;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ========================================
+   Navigation - Codeforces Style
+   ======================================== */
+.navbar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #B9B9B9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 50px;
+}
+
+.nav-brand .brand-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0000FF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0;
+}
+
+.nav-item {
+    border-left: 1px solid #B9B9B9;
+}
+
+.nav-item:last-child {
+    border-right: 1px solid #B9B9B9;
+}
+
+.nav-link {
+    color: #0000FF;
+    text-decoration: none;
+    font-weight: normal;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.2s ease;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    background-color: #F0F0F0;
+    color: #0000FF;
+}
+
+.nav-link.active {
+    background-color: #E1E1E1;
+    border-bottom-color: #0000FF;
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-toggle .bar {
+    width: 25px;
+    height: 2px;
+    background-color: #0000FF;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* ========================================
+   Main Content & Sections
+   ======================================== */
+.main-content {
+    margin-top: 50px;
+    background-color: #FFFFFF;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #3B3B3B;
+    margin-bottom: 30px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #B9B9B9;
+}
+
+/* ========================================
+   Hero Section - Codeforces Style
+   ======================================== */
+.hero {
+    text-align: left;
+    padding: 60px 0;
+    background-color: #FAFAFA;
+    border: 1px solid #E1E1E1;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.hero > * {
+    padding: 0 40px;
+}
+
+.hero-name {
+    font-size: 32px;
+    color: #0000FF;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero-title {
+    font-size: 18px;
+    color: #3B3B3B;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.hero-tagline {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* ========================================
+   Buttons - Codeforces Style
+   ======================================== */
+.btn {
+    padding: 8px 16px;
+    border: 1px solid;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: normal;
+    transition: all 0.2s ease;
+    display: inline-block;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.btn:focus {
+    outline: 2px solid #0000FF;
+    outline-offset: 1px;
+}
+
+.btn-primary {
+    background-color: #0000FF;
+    color: white;
+    border-color: #0000FF;
+}
+
+.btn-primary:hover {
+    background-color: #0000CC;
+    border-color: #0000CC;
+}
+
+.btn-secondary {
+    background-color: #FFFFFF;
+    color: #0000FF;
+    border-color: #0000FF;
+}
+
+.btn-secondary:hover {
+    background-color: #F0F0FF;
+}
+
+.btn-full-width {
+    width: 100%;
+}
+
+/* ========================================
+   About Section - Codeforces Style
+   ======================================== */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.about-card {
+    background-color: #FAFAFA;
+    border: 1px solid #E1E1E1;
+    border-radius: 6px;
+    padding: 20px;
+    transition: all 0.2s ease;
+}
+
+.about-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h3 {
+    color: #0000FF;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 10px;
+}
+
+/* Education */
+.education-item h4 {
+    color: #3B3B3B;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.education-school {
+    color: #0000FF;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.education-year, .education-gpa {
+    color: #666666;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+/* Skills */
+.skills-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-category h4 {
+    color: #3B3B3B;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-tag {
+    background-color: #E1E1FF;
+    color: #0000FF;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: normal;
+    transition: all 0.2s ease;
+    border: 1px solid #C1C1FF;
+}
+
+.skill-tag:hover {
+    background-color: #0000FF;
+    color: white;
+    border-color: #0000FF;
+}
+
+/* Achievements */
+.achievements-list {
+    list-style: none;
+}
+
+.achievements-list li {
+    color: #3B3B3B;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 13px;
+}
+
+.achievements-list li:before {
+    content: "→";
+    color: #0000FF;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* ========================================
+   Projects Section - Codeforces Style
+   ======================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #FAFAFA;
+    border: 1px solid #E1E1E1;
+    border-radius: 6px;
+    padding: 20px;
+    transition: all 0.2s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.project-title {
+    color: #0000FF;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.project-description {
+    color: #3B3B3B;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+.project-tech {
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    background-color: #F0F0F0;
+    color: #3B3B3B;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: normal;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    display: inline-block;
+    transition: all 0.2s ease;
+    border: 1px solid #D0D0D0;
+}
+
+.tech-tag:hover {
+    background-color: #E1E1E1;
+}
+
+.project-links {
+    display: flex;
+    gap: 12px;
+}
+
+.project-link {
+    color: #0000FF;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   Contact Section - Codeforces Style
+   ======================================== */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-info h3 {
+    color: #0000FF;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-info p {
+    color: #3B3B3B;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+.contact-details p {
+    color: #3B3B3B;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: #0000FF;
+    text-decoration: none;
+    font-weight: normal;
+    transition: all 0.2s ease;
+    font-size: 13px;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form - Codeforces Style */
+.contact-form {
+    background-color: #FAFAFA;
+    border: 1px solid #E1E1E1;
+    border-radius: 6px;
+    padding: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #3B3B3B;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #B9B9B9;
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: Verdana, Arial, sans-serif;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #0000FF;
+    box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.1);
+}
+
+.form-control:hover {
+    border-color: #999999;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ========================================
+   Footer - Codeforces Style
+   ======================================== */
+.footer {
+    background-color: #F5F5F5;
+    border-top: 1px solid #B9B9B9;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer p {
+    color: #666666;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* ========================================
+   Mobile Responsive
+   ======================================== */
+@media (max-width: 768px) {
+    /* Mobile Navigation */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 50px;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        width: 100%;
+        text-align: left;
+        transition: 0.3s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid #B9B9B9;
+        padding: 0;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        border-left: none;
+        border-bottom: 1px solid #E1E1E1;
+    }
+
+    .nav-item:last-child {
+        border-right: none;
+    }
+
+    .nav-link {
+        padding: 12px 20px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Content adjustments */
+    .hero {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero > * {
+        padding: 0;
+    }
+
+    .hero-name {
+        font-size: 28px;
+    }
+
+    .hero-title {
+        font-size: 16px;
+    }
+
+    .hero-links {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+        min-width: 200px;
+    }
+
+    .section {
+        padding: 30px 0;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .about-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-card,
+    .project-card,
+    .contact-form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .hero-name {
+        font-size: 24px;
+    }
+
+    .hero-title {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+} 
